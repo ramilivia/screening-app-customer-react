@@ -64,7 +64,6 @@ const MockBackend = {
         Venues = Venues.filter(v => v.id !== venue_id);
     },
     removeClient: (client_id) => {Clients = Clients.filter(c => c.id !== client_id)},
-
 };
 
 export default MockBackend;

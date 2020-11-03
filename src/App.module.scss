@@ -1,0 +1,18 @@
+html {
+    background: linear-gradient(89deg, #17b0f4, #003865);
+}
+
+.App {
+    margin: 20px;
+    
+    .logoContainer {
+        max-width: 150px;
+        background-color: white;
+        padding: 11px;
+        border-radius: 19px;
+
+        img {
+            width: 100%;
+        }
+    }
+}

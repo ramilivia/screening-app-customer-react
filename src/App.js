@@ -1,13 +1,17 @@
 import React from 'react';
 import ClientList from './components/ClientList/ClientList';
-import styles from './App.scss';
 import classnames from 'classnames';
+import styles from './App.module.scss';
+import logo from './assets/home-logo.png'
+
 
 
 const App = () => {
     return (
         <div className={classnames(styles.App)}>
-            <h1>Clients</h1>
+            <div className={classnames(styles.logoContainer)}>
+                <img src={logo}/>
+            </div>
             <ClientList/>
         </div>
     );

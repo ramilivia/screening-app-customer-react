@@ -14,8 +14,23 @@ const ClientList = (props) => {
         <div className={classnames(styles.ClientList)}>
             {clients ? 
                 <ul className={classnames(styles.list)}>
-                    {clients?.map(client => (
-                        <li>{client.name}</li>
+                    <li className={classnames(styles.header, styles.item)}>
+                        <div>Name</div>
+                        <div>Email</div>
+                        <div>First Name</div>
+                        <div>Last Name</div>
+                        <div>Age</div>
+                        <div>Favorite Venues</div>
+                    </li>
+                    {clients.map(client => (
+                        <li className={classnames(styles.item)}>
+                            <div>{client.name}</div>
+                            <div>{client.email}</div>
+                            <div>{client.firstName}</div>
+                            <div>{client.lastName}</div>
+                            <div>{client.age}</div>
+                            <div>Venues</div>
+                        </li>
                     ))}
                 </ul>
             :

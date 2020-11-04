@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux'
 import styles from './ClientList.module.scss';
 import classnames from 'classnames';
-import MockBackend from '../../utils/MockBackend.js';
+import { listClients } from '../../redux/api/api.actions';
+
 
 const ClientList = (props) => {
-    const [clients, setClients] = useState(null);
+    const clients = useSelector(state => state.clients);
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        setClients(MockBackend.listClients)
+        dispatch(listClients());
     }, []);
     
     return (
@@ -29,7 +32,18 @@ const ClientList = (props) => {
                             <div>{client.firstName}</div>
                             <div>{client.lastName}</div>
                             <div>{client.age}</div>
-                            <div>Venues</div>
+                            <div>
+                                {client.favoriteVenues.length ? 
+                                    client.favoriteVenues.reduce((acc, curr, index) => {
+                                        if(index != client.favoriteVenues.length -1)
+                                            return acc + curr.name + ', ';
+                                        else 
+                                            return acc + curr.name;
+                                    }, '')        
+                                :                        
+                                    'No Venues'
+                                }
+                            </div>
                         </li>
                     ))}
                 </ul>

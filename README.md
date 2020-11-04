@@ -20,7 +20,7 @@ My idea was to demostrate:
 - Responsiveness was out of scope
 
 ## Visual Proof
-
+![alt text](https://github.com/ramilivia/screening-app-customer-react/blob/master/demo.gif "Demo")
 
 
 ## Installation and running the project

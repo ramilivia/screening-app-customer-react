@@ -1,16 +1,40 @@
+@import '../../global.scss';
+
 .ClientList {
     
+    .search {
+        padding-left: 6px;
+        padding-right: 6px;
+        border-radius: 12px;
+        border: 1px solid $dark-blue;
+        background-color: $dark-blue;
+        color: $white;
+        line-height: 33px;
+        outline: none;
+        transition: 0.2s all;
+
+        &:focus {
+            border-color: $white;
+        }
+
+        &::placeholder {
+            color: $white;
+        }
+    }
+
     .list {
-        background-color: white;
+        background-color: $white;
         list-style: none;
         padding: 0;
-        border-radius: 20px;
-        
+        border-radius: 21px;
+        height: 30px;
+        transition: 0.5s height;
+
         .header {
-            background-color: #003865;
+            background-color: $dark-blue;
             border-top-left-radius: 18px;
             border-top-right-radius: 18px;
-            color: white;
+            color: $white;
             font-weight: bold;
         }
 
@@ -19,15 +43,21 @@
             grid-template-columns: 0.7fr 1fr 1fr 1fr 0.3fr 2fr;
             grid-template-rows: 1fr;
             padding: 10px;
+            transition: 0.6s opacity;
+            opacity: 0;
+            
+            &.header {
+                opacity: 100%;
+            }
             
             &:not(.header):nth-child(even) {
-                background-color: #80808017;
+                background-color: $light-gray;
             }
 
             &:not(.header):hover {
                 cursor: pointer;
-                background-color: #003865;
-                color: white;
+                background-color: $dark-blue;
+                color: $white;
                 transition: 0.4s all;
             }
         }

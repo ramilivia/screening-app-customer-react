@@ -1,5 +1,7 @@
+@import './global.scss';
+
 html {
-    background: linear-gradient(89deg, #17b0f4, #003865);
+    background: linear-gradient(89deg, $light-blue, $dark-blue);
 }
 
 .App {
@@ -7,7 +9,7 @@ html {
     
     .logoContainer {
         max-width: 150px;
-        background-color: white;
+        background-color: $white;
         padding: 11px;
         border-radius: 19px;
 

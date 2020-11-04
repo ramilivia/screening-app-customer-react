@@ -9,12 +9,12 @@ const api = (state = INITIAL_STATE, action) => {
         case LIST_CLIENTS:
             return {
                 ...state,
-                clients: action.payload
+                clients: [...action.payload]
             }
         case ADD_CLIENT: {
             return {
                 ...state,
-                clients: [...state.clients]
+                clients: [...state.clients, action.payload]
             }
         }
         default:

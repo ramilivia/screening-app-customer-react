@@ -11,7 +11,7 @@ const Button = ({onClick, text, type = BUTTON_TYPE.SMALL}) => {
     
     return (
         <div className={classnames(styles.Button, styles[type.toLowerCase()])} onClick={onClick}>
-            <p>{text}</p>
+            {text}
         </div>
     );
 }

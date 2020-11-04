@@ -1,18 +1,38 @@
 @import '../../global.scss';
 
 .Button {
+    cursor: pointer;
+    transition: background-color 0.2s;
 
     &.modal {
         border: 2px solid $light-blue;
         background-color: $light-blue;
         border-radius: 12px;
         text-align: center;
-        color: $white;
-        transition: background-color 0.2s;
+        color: $white;        
+        padding: 15px;
 
         &:hover {
-            cursor: pointer;
             background-color: $white;
+            color: $light-blue;
+        }
+    }
+
+    &.small {
+        box-sizing: border-box;
+        padding: 2px 6px;
+        border-radius: 12px;
+        border: 2px solid $dark-blue;
+        background-color: $white;
+        color: $dark-blue;
+        line-height: 33px;
+        outline: none;
+        transition: 0.2s all;
+        width: 170.8px;
+        font-size: 13.5px;
+
+        &:hover {
+            background-color: $dark-blue;
             color: $light-blue;
         }
     }

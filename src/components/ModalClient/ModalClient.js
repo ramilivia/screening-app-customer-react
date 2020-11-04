@@ -56,7 +56,6 @@ const ModalClient = () => {
                 <Field label='First Name' onChange={onChangeFirstName} value={firstName}/>
                 <Field label='Last Name' onChange={onChangeLastName} value={lastName}/>
                 <Field label='Age' onChange={onChangeAge} value={age}/>
-                <Field label='Venues'/>
             </form>
             <Button onClick={() => {onSend()}} text='SUBMIT' type={BUTTON_TYPE.MODAL}/>
         </Modal>

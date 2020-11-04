@@ -21,7 +21,10 @@ const App = () => {
                 <div className={classnames(styles.logoContainer)}>
                     <img src={logo}/>
                 </div>
-                <Button onClick={showClientModal} text='Add New Client'/>
+                <div className={classnames(styles.buttonsContainer)}>
+                    <Button onClick={showClientModal} text='Add New Client'/>
+                </div>
+                
                 <ClientList/>
             </div>
             <ModalClient/>

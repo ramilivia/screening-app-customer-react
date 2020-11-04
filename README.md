@@ -6,7 +6,7 @@ Given a mocked customers API, we want to:
 
 ## Implementation
 THIS PROJECT WAS MADE IN 10 HOURS or LESS starting FE from scratch, it's not perfect, the idea is to show some main concepts
-No third party libraries were used on this project
+*NO THIRD PARTY LIBRARIES WERE USED ON THIS PROJECT
 
 My idea was to demostrate:
 - Ability to wire an application from scatch
@@ -14,10 +14,13 @@ My idea was to demostrate:
 - Knowledge on wiring & using redux w/ hooks
 - Knowledge on sass & good practices
 - Knowledge about Animations
-- Knowledge about scaffolding and good practices
+- Knowledge about scaffolding and general good practices
 
 ## Notes
 - Responsiveness was out of scope
+
+## Visual Proof
+
 
 
 ## Installation and running the project

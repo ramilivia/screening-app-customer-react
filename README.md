@@ -1,3 +1,28 @@
+## Goals
+Given a mocked customers API, we want to:
+- List Customers & their favorite venues
+- Filter Customers by age
+- Add new Customers
+
+## Implementation
+THIS PROJECT WAS MADE IN 10 HOURS or LESS starting FE from scratch, it's not perfect, the idea is to show some main concepts
+*NO THIRD PARTY LIBRARIES WERE USED ON THIS PROJECT
+
+My idea was to demostrate:
+- Ability to wire an application from scatch
+- Knowledge on react using hooks
+- Knowledge on wiring & using redux w/ hooks
+- Knowledge on sass & good practices
+- Knowledge about Animations
+- Knowledge about scaffolding and general good practices
+
+## Notes
+- Responsiveness was out of scope
+
+## Visual Proof
+
+
+
 ## Installation and running the project
 
 To run first install dependencies:
@@ -7,16 +32,4 @@ Then start the project with:
 `yarn start` or `npm start`
 
 
-## Available Backend Functions
 
-### `listCLients()` List all clients 
-### `listVenues()` List all venues 
-### `getVenue(venue_id)` Get a single venue 
-### `getClient(client_id)` Get a single client 
-### `addClient(client)` Adds a client, required email and user
-### `addVenue(venue)` Adds a venue, required name
-### `getClientFavoriteVenues(client_id)` Returns a client's favorite venues
-### `addFavoriteVenueToClient(client_id, venue_id)` Add favorite venue to client
-### `removeFavoriteVenueFromClient(client_id, venue_id)` Remove favorite venue from client
-### `removeVenue(venue_id)` Removes a venue
-### `removeClient(client_id)` Removes a client

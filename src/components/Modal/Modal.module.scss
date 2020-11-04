@@ -1,7 +1,7 @@
 @import '../../global.scss';
 
 .ModalOverlay {
-    visibility: visible;
+    visibility: hidden;
     position: absolute;
     background-color: $dark-blue;
     width: 100%;
@@ -18,6 +18,7 @@
             }
             to {
                 opacity: 80%;
+                visibility: visible;
             }
         }
     }
@@ -38,7 +39,7 @@
 }
 
 .Modal {
-    visibility: visible;
+    visibility: hidden;
     background: $white;
     position: absolute;
     min-width: 400px;
@@ -51,7 +52,6 @@
     padding: 20px;
     
     &.show {
-        visibility: visible;
         animation: modal-move 0.5s linear forwards,
                    modal-opacity 0.6s linear forwards;
 
@@ -66,6 +66,7 @@
                 bottom: 50%;
                 transform: translateX(-50%) translateY(40%);
                 opacity: 100%;
+                visibility: visible;
             }
         }
 
@@ -75,12 +76,13 @@
             }
             to {
                 opacity: 100%;
+                visibility: visible;
             }
         }
     }
 
     &.hide {
-        animation: modal-hide 0.3s linear forwards;
+        animation: modal-hide 0.4s linear forwards;
 
         @keyframes modal-hide {
             from {
@@ -88,10 +90,11 @@
                 bottom: 50%;
                 transform: translateX(-50%) translateY(40%);
                 opacity: 100%;
+                visibility: visible;
             }
             to {
-                opacity: 0;
                 visibility: hidden;
+                opacity: 0;
             }   
         }
     }

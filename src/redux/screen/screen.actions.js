@@ -1,7 +1,7 @@
-import { SHOW_MODAL } from './screen.types';
+import { TOGGLE_MODAL_CLIENT } from './screen.types';
 
-export const showModal = () => {
+export const toggleModalClient = () => {
     return {
-        type: SHOW_MODAL
+        type: TOGGLE_MODAL_CLIENT
     }
 }

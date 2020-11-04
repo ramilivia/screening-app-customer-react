@@ -1,1 +1,1 @@
-export const SHOW_MODAL = 'SHOW_MODAL';
+export const TOGGLE_MODAL_CLIENT = 'TOGGLE_MODAL_CLIENT';

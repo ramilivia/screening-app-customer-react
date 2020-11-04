@@ -1,4 +1,4 @@
-import { LIST_CLIENTS } from './api.types';
+import { ADD_CLIENT, LIST_CLIENTS } from './api.types';
 
 const INITIAL_STATE = {
     clients: [] 
@@ -11,6 +11,12 @@ const api = (state = INITIAL_STATE, action) => {
                 ...state,
                 clients: action.payload
             }
+        case ADD_CLIENT: {
+            return {
+                ...state,
+                clients: [...state.clients, action.payload]
+            }
+        }
         default:
             return state;
     }

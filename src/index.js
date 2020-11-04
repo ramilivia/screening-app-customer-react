@@ -8,8 +8,6 @@ import api from './redux/api/api.reducer';
 import screen from './redux/screen/screen.reducer';
 import { Provider } from 'react-redux';
 
-console.log(api.toString())
-
 const rootReducer = combineReducers({
     api,
     screen

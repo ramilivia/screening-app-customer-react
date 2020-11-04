@@ -1,15 +1,15 @@
-import { SHOW_MODAL } from './screen.types';
+import { TOGGLE_MODAL_CLIENT } from './screen.types';
 
 const INITIAL_VALUE = {
-    show: false
+    showModalClient: false
 };
 
 const screen = (state = INITIAL_VALUE, action) => {
         switch(action.type) {
-            case SHOW_MODAL:
+            case TOGGLE_MODAL_CLIENT:
                 return {
                     ...state,
-                    modalShow: true
+                    showModalClient: !state.showModalClient
                 }
             default:
                 return state;

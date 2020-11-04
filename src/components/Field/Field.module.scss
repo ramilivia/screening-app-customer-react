@@ -1,0 +1,15 @@
+@import '../../global.scss';
+
+.Field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    input {
+        border-radius: 6px;
+        box-shadow: none;
+        border: 1px solid $dark-blue;
+        outline: none;
+        padding: 6px;
+        width: 240px;
+    }
+}

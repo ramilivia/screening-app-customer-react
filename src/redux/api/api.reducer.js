@@ -14,7 +14,7 @@ const api = (state = INITIAL_STATE, action) => {
         case ADD_CLIENT: {
             return {
                 ...state,
-                clients: [...state.clients, action.payload]
+                clients: [...state.clients]
             }
         }
         default:

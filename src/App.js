@@ -16,11 +16,12 @@ const App = () => {
     
     return (
         <div className={classnames(styles.App)}>
-            <div className={classnames(styles.logoContainer)}>
-                <img src={logo}/>
+            <div className={classnames(styles.content)}>
+                <div className={classnames(styles.logoContainer)}>
+                    <img src={logo}/>
+                </div>
+                <ClientList/>
             </div>
-            
-            <ClientList/>
             <ModalClient/>
         </div>
     );

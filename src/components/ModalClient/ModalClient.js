@@ -6,6 +6,7 @@ import Modal from '../Modal/Modal';
 import styles from './ModalClient.module.scss';
 import classnames from 'classnames';
 import Field from '../Field/Field';
+import Button from '../Button/Button';
 
 
 const ModalClient = () => {
@@ -16,7 +17,6 @@ const ModalClient = () => {
     const [firstName, setFirstName] = useState(null);
     const [lastName, setLastName] = useState(null);
     const [age, setAge] = useState(null);
-    const [venues, setVenues] = useState(null);
 
     const onChangeName = (e) => {
         setName(e.target.value);
@@ -46,6 +46,7 @@ const ModalClient = () => {
         console.log('AGE: ', age);
         let favoriteVenues = [];
         dispatch(addClient({name, email, firstName, lastName, age, favoriteVenues}));
+        closeModal();
     }
 
     const closeModal = () => {
@@ -54,7 +55,7 @@ const ModalClient = () => {
 
     return (
         <Modal show={show} title={'New Client'} className={styles.ModalClient} onClose={closeModal}>
-            <form className={classnames(styles.ModalClient)}>
+            <form className={styles.form}>
                 <Field label='Name' onChange={onChangeName} value={name}/>
                 <Field label='Email' onChange={onChangeEmail} value={email}/>
                 <Field label='First Name' onChange={onChangeFirstName} value={firstName}/>
@@ -62,9 +63,7 @@ const ModalClient = () => {
                 <Field label='Age' onChange={onChangeAge} value={age}/>
                 <Field label='Venues'/>
             </form>
-            <div onClick={onSend}>
-                SEND
-            </div>
+            <Button onClick={() => {onSend()}} text='SUBMIT'/>
         </Modal>
     );
 }

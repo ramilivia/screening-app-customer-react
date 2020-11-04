@@ -5,14 +5,18 @@ html {
 }
 
 .App {    
-    .logoContainer {
-        max-width: 150px;
-        background-color: $white;
-        padding: 11px;
-        border-radius: 19px;
-
-        img {
-            width: 100%;
+    .content {
+        margin: 20px;
+        
+        .logoContainer {
+            max-width: 150px;
+            background-color: $white;
+            padding: 11px;
+            border-radius: 19px;
+    
+            img {
+                width: 100%;
+            }
         }
     }
 }

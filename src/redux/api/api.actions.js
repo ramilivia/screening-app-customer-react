@@ -12,7 +12,6 @@ export const listClients = () => {
 export const addClient = (client) => {
     MockBackend.addClient(client);
     return {
-        type: ADD_CLIENT,
-        payload: client
+        type: ADD_CLIENT
     }
 }

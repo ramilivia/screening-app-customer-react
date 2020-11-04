@@ -4,10 +4,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    p {
+        color: $dark-blue;
+    }
+
     input {
         border-radius: 6px;
         box-shadow: none;
-        border: 1px solid $dark-blue;
+        border: 1px solid $light-blue;
         outline: none;
         padding: 6px;
         width: 240px;

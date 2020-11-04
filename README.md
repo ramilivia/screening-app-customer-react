@@ -5,8 +5,9 @@ Given a mocked customers API, we want to:
 - Add new Customers
 
 ## Implementation
-THIS PROJECT WAS MADE IN 10 HOURS or LESS starting FE from scratch, it's not perfect, the idea is to show some main concepts
-*NO THIRD PARTY LIBRARIES WERE USED ON THIS PROJECT
+THIS PROJECT WAS MADE IN 10 HOURS starting FE from scratch, it's not perfect, the idea is to show some main concepts
+
+- NO THIRD PARTY LIBRARIES WERE USED ON THIS PROJECT
 
 My idea was to demostrate:
 - Ability to wire an application from scatch

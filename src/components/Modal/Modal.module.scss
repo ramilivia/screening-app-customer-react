@@ -1,0 +1,44 @@
+@import '../../global.scss';
+
+.Modal {
+    visibility: hidden;
+    background: $white;
+    position: absolute;
+    width: 40vw;
+    min-height: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    border-radius: 18px;
+    
+
+    &.show {
+        visibility: visible;
+        animation: modal-move 0.5s linear forwards,
+                   modal-opacity 0.6s linear forwards;
+
+    }
+
+    @keyframes modal-move {
+        from {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+        }
+        to {
+            bottom: 50%;
+            transform: translateX(-50%) translateY(40%);
+            opacity: 100%;
+        }
+    }
+
+    @keyframes modal-opacity {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 100%;
+        }
+    }
+}

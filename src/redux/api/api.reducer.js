@@ -4,7 +4,7 @@ const INITIAL_STATE = {
     clients: [] 
 }
 
-const reducer = (state = INITIAL_STATE, action) => {
+const api = (state = INITIAL_STATE, action) => {
     switch(action.type) {
         case LIST_CLIENTS:
             return {
@@ -16,4 +16,4 @@ const reducer = (state = INITIAL_STATE, action) => {
     }
 }
 
-export default reducer;
+export default api;

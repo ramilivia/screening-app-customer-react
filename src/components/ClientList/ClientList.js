@@ -6,7 +6,7 @@ import { listClients } from '../../redux/api/api.actions';
 
 
 const ClientList = (props) => {
-    const clients = useSelector(state => state.clients);
+    const clients = useSelector(state => state.api.clients);
     const [filtered, setFiltered] = useState([]);
     const dispatch = useDispatch();
     const listRef = useRef();

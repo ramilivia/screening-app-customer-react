@@ -3,12 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { createStore } from 'redux';
-import apiReducer from './redux/api/api.reducer';
+import { createStore, combineReducers } from 'redux';
+import api from './redux/api/api.reducer';
+import screen from './redux/screen/screen.reducer';
 import { Provider } from 'react-redux';
 
+console.log(api.toString())
+
+const rootReducer = combineReducers({
+    api,
+    screen
+});
+
 ReactDOM.render(
-    <Provider store={createStore(apiReducer)}>
+    <Provider store={createStore(rootReducer)}>
         <App/>
     </Provider>
 , document.getElementById('root'));

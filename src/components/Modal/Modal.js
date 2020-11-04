@@ -10,7 +10,7 @@ const Modal = ({show, title, onClose, children, className}) => {
     const onHide = () => {
         setHide(true);
         onClose();
-        //After animation ends restore state
+        //Wait for animation ending & restore state
         setTimeout(() => {
             setHide(false);
         }, 810);
@@ -22,6 +22,7 @@ const Modal = ({show, title, onClose, children, className}) => {
         <div>
             <div className={classnames(styles.ModalOverlay, show ? styles.showOverlay : styles.hideOverlay)} onClick={onHide}/>
             <div className={classnames(styles.Modal, show ? styles.show : null, hide ? styles.hide : null, className)}>
+                <div className={classnames(styles.close)} onClick={onHide}>X</div>
                 <div className={classnames(styles.title)}>
                     <h2>{title}</h2>
                 </div>

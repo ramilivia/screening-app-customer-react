@@ -17,6 +17,8 @@ const ModalClient = () => {
     const [firstName, setFirstName] = useState(null);
     const [lastName, setLastName] = useState(null);
     const [age, setAge] = useState(null);
+    const [errorName, setErrorName] = useState(null);
+    const [errorEmail, setErrorEmail] = useState(null);
 
     const onChangeName = (e) => {
         setName(e.target.value);
@@ -39,17 +41,44 @@ const ModalClient = () => {
     }
 
     const onSend = () => {
-        let favoriteVenues = [];
-        dispatch(addClient({name, email, firstName, lastName, age, favoriteVenues}));
-        closeModal();
+        if (!name) {
+            setErrorName('Name cannot be empty');
+        } else {
+            setErrorName(null);
+        }
+            
+        if(!email) {
+            setErrorEmail('Email cannot be empty')
+        } else {
+            setErrorEmail(null);
+        }
+            
+        if(name && email) {
+            let favoriteVenues = [];
+            dispatch(addClient({name, email, firstName, lastName, age, favoriteVenues}));
+            setName(null);
+            setEmail(null);
+            setFirstName(null);
+            setLastName(null);
+            setAge(null);
+            closeModal();
+        }
     }
 
     const closeModal = () => {
+        setErrorName(null);
+        setErrorEmail(null);
         dispatch(toggleModalClient())
+    }
+
+    const renderError = (error) => {
+        return error ?  <p className={classnames(styles.error)}>{error}</p> : null;
     }
 
     return (
         <Modal show={show} title={'New Client'} className={classnames(styles.ModalClient)} onClose={closeModal}>
+            {renderError(errorName)}
+            {renderError(errorEmail)}
             <form className={classnames(styles.form)}>
                 <Field label='Name' onChange={onChangeName} value={name}/>
                 <Field label='Email' onChange={onChangeEmail} value={email}/>

@@ -1,7 +1,14 @@
 @import '../../global.scss';
 
 .ModalClient {
-   .form {
-       margin-bottom: 30px;
-   }
+
+    .error {
+        color: red;
+        font-size: 12px;
+        text-align: center;
+    }
+ 
+    .form {
+        margin-bottom: 30px;
+    }
 }

@@ -112,4 +112,14 @@
             margin-bottom: 10px;
         }
     }
+
+    .close {
+        position: absolute;
+        right: 13px;
+        font-size: 13px;
+        top: 7px;
+        font-weight: bold;
+        color: $dark-blue;
+        cursor: pointer;
+    }
 }
